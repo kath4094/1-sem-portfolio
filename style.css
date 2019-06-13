@@ -1,1 +1,36 @@
+body {
+    margin: 0;
+}
 
+a {
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #484E47;
+    font-size: 1.2rem;
+    padding-top: 10vw;
+    word-spacing: 10em;
+
+}
+
+
+/*FORSIDE START*/
+.forsidepic {
+    display: flex;
+    background-image: url(billeder/baggrund_forside.png);
+    background-size: 100vw;
+    width: 101vw;
+    height: 50vw;
+    position: relative;
+    z-index: 4;
+
+}
+
+.nav {
+    background-color: white;
+    position: absolute;
+    width: 100vw;
+    height: 4vw;
+    z-index: 5;
+    text-align: right;
+    top: 50vw;
+}
