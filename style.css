@@ -2,15 +2,30 @@ body {
     margin: 0;
 }
 
-a {
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 4rem;
+    width: 85rem;
+}
+
+nav a {
     text-decoration: none;
     font-family: sans-serif;
     color: #484E47;
-    font-size: 1.2rem;
-
+    font-size: 1.4rem;
+    padding-left: 5rem;
+    font-weight: bold;
+    padding-right: 2rem;
 
 }
 
+nav a:hover {
+    color: saddlebrown;
+    font-family: sans-serif;
+    text-decoration: none;
+}
 
 /*FORSIDE START*/
 .forsidepic {
@@ -28,31 +43,141 @@ a {
     background-color: white;
     position: absolute;
     width: 100vw;
-    height: 4vw;
     z-index: 5;
     text-align: right;
-    top: 45vw;
-    left:
 }
+
+
 
 /*FORSIDE SLUT*/
 /*PORTFOLIO START*/
 
-.baggrundpic{
+.baggrundpic {
     display: flex;
     background-image: url(billeder/baggrund_skov.png);
     background-size: cover;
-    width: 101vw;
-    height: 48vw;
+    width: 100vw;
+    height: 50vw;
     position: relative;
-    z-index: 4;
+    z-index: 1;
+    background-repeat: repeat-y;
 }
 
-#portfolio nav{
+/*Gælder for alle sider med baggrundsbillede af skov*/
+
+#portfolio nav {
     background-color: white;
     position: absolute;
-    width: 100vw;
-    height: 4vw;
     z-index: 5;
     text-align: right;
+}
+
+.box1 {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    top: 20vw;
+    left: 10vw;
+    background-color: rgba(255, 255, 255, 0.76);
+    margin: 2rem;
+    text-align: center;
+
+
+}
+
+.box2 {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    top: 20vw;
+    left: 30vw;
+    background-color: rgba(255, 255, 255, 0.76);
+    margin: 2rem;
+    text-align: center;
+
+
+}
+
+
+.box3 {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    top: 20vw;
+    left: 50vw;
+    background-color: rgba(255, 255, 255, 0.76);
+    margin: 2rem;
+    text-align: center;
+
+
+}
+
+.box4 {
+    position: absolute;
+    width: 15vw;
+    height: 15vw;
+    top: 20vw;
+    left: 70vw;
+    background-color: rgba(255, 255, 255, 0.76);
+    margin: 2rem;
+    text-align: center;
+
+
+}
+
+
+#portfolio a {
+    position: relative;
+    top: 6.5vw;
+    font-family: sans-serif;
+    color: #484E47;
+    font-size: 1.3rem;
+    text-decoration: none;
+
+}
+
+h1 {
+    position: absolute;
+    color: #484E47;
+    font-family: sans-serif;
+    left: 40vw;
+    font-size: 5rem;
+    top: 4vw;
+
+
+}
+
+
+/*PORTFOLIO SIDE SLUT*/
+
+/*CV START*/
+/*Samme opsætning bruges i portfolio undersiderne som i CV
+Husk at sæt det ind*/
+
+
+#cv .sectionwrapper {
+    display: flex;
+    position: absolute;
+}
+
+#cv .col1 {
+    position: relative;
+    flex-basis: 400px;
+    top: 20vw;
+    margin-left: 20vw;
+    max-height: 25vw;
+
+}
+
+#cv .billede1 {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+}
+
+#cv .col2 {
+    position: relative;
+    flex-basis: 700px;
+    top: 20vw;
+    max-height: 25vw;
 }
