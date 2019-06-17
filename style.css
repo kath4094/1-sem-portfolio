@@ -2,12 +2,27 @@ body {
     margin: 0;
 }
 
+p {
+    font-family: sans-serif;
+}
+
+li {
+    font-family: sans-serif;
+}
+
+h3 {
+    font-family: sans-serif;
+}
+
 nav {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    height: 4rem;
+    height: 3rem;
     width: 85rem;
+    z-index: 5;
+    background-color: white
 }
 
 nav a {
@@ -27,11 +42,14 @@ nav a:hover {
     text-decoration: none;
 }
 
+
 /*FORSIDE START*/
+
+
 .forsidepic {
     display: flex;
     background-image: url(billeder/baggrund_forside.png);
-    background-size: 100vw;
+    background-size: 100%;
     width: 101vw;
     height: 48vw;
     position: relative;
@@ -45,6 +63,7 @@ nav a:hover {
     width: 100vw;
     z-index: 5;
     text-align: right;
+    position: fixed;
 }
 
 
@@ -52,7 +71,7 @@ nav a:hover {
 /*FORSIDE SLUT*/
 /*PORTFOLIO START*/
 
-.baggrundpic {
+#portfolio {
     display: flex;
     background-image: url(billeder/baggrund_skov.png);
     background-size: cover;
@@ -61,38 +80,37 @@ nav a:hover {
     position: relative;
     z-index: 1;
     background-repeat: repeat-y;
+    flex-direction: column;
+
 }
 
 /*Gælder for alle sider med baggrundsbillede af skov*/
 
 #portfolio nav {
     background-color: white;
-    position: absolute;
+    position: relative;
     z-index: 5;
     text-align: right;
 }
 
 .box1 {
-    position: absolute;
+    flex-basis: 200px;
+    position: relative;
     width: 15vw;
     height: 15vw;
-    top: 20vw;
-    left: 10vw;
     background-color: rgba(255, 255, 255, 0.76);
-    margin: 2rem;
     text-align: center;
+
 
 
 }
 
 .box2 {
-    position: absolute;
+    flex-basis: 200px;
+    position: relative;
     width: 15vw;
     height: 15vw;
-    top: 20vw;
-    left: 30vw;
     background-color: rgba(255, 255, 255, 0.76);
-    margin: 2rem;
     text-align: center;
 
 
@@ -100,26 +118,22 @@ nav a:hover {
 
 
 .box3 {
-    position: absolute;
+    flex-basis: 200px;
+    position: relative;
     width: 15vw;
     height: 15vw;
-    top: 20vw;
-    left: 50vw;
     background-color: rgba(255, 255, 255, 0.76);
-    margin: 2rem;
     text-align: center;
 
 
 }
 
 .box4 {
-    position: absolute;
+    flex-basis: 200px;
+    position: relative;
     width: 15vw;
     height: 15vw;
-    top: 20vw;
-    left: 70vw;
     background-color: rgba(255, 255, 255, 0.76);
-    margin: 2rem;
     text-align: center;
 
 
@@ -137,16 +151,52 @@ nav a:hover {
 }
 
 h1 {
-    position: absolute;
     color: #484E47;
     font-family: sans-serif;
-    left: 40vw;
     font-size: 5rem;
-    top: 4vw;
+    text-align: center;
+
 
 
 }
 
+/*Hover til hver boks*/
+#portfolio .overlay1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(85, 35, 0, 0.29);
+}
+
+
+#portfolio .box1:hover .overlay1 {
+    opacity: 1;
+}
+
+#portfolio .box2:hover .overlay1 {
+    opacity: 1;
+}
+
+#portfolio .box3:hover .overlay1 {
+    opacity: 1;
+}
+
+#portfolio .box4:hover .overlay1 {
+    opacity: 1;
+}
+
+#portfolio .sectionwrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 5rem;
+}
 
 /*PORTFOLIO SIDE SLUT*/
 
@@ -155,29 +205,489 @@ h1 {
 Husk at sæt det ind*/
 
 
-#cv .sectionwrapper {
+#cv {
     display: flex;
-    position: absolute;
+    background-image: url(billeder/baggrund_skov.png);
+    background-size: cover;
+    width: 100vw;
+    height: 50vw;
+    position: relative;
+    z-index: 1;
+    background-repeat: repeat-y;
+    flex-direction: column;
+
+}
+
+
+
+#cv .sectionwrapper1 {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #cv .col1 {
-    position: relative;
-    flex-basis: 400px;
-    top: 20vw;
-    margin-left: 20vw;
-    max-height: 25vw;
+    margin-top: 2rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
 
 }
 
-#cv .billede1 {
+#cv .billede {
     background-image: url(billeder/kathrinebrohus.jpg);
     width: 20vw;
     height: 20vw;
+    background-repeat: no-repeat;
 }
 
-#cv .col2 {
+/*CV SLUT*/
+
+/*01 WEB START*/
+#web {
+    display: flex;
+    background-image: url(billeder/baggrund_skov.png);
+    background-size: cover;
+    width: 100vw;
+    height: 50vw;
     position: relative;
-    flex-basis: 700px;
-    top: 20vw;
-    max-height: 25vw;
+    z-index: 1;
+    background-repeat: repeat-y;
+    flex-direction: column;
+    background-color: aqua;
+
+}
+
+#web .sectionwrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#web .col1 {
+    margin-top: 2rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#web .billede {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+}
+
+/*01 WEB SLUT*/
+/*02 ANIMATION START*/
+#animation {
+    display: flex;
+    background-image: url(billeder/baggrund_skov.png);
+    background-size: 100%;
+    width: 100vw;
+    height: 70vw;
+    position: relative;
+    z-index: 1;
+    background-repeat: repeat;
+    flex-direction: column;
+
+}
+
+#animation .sectionwrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#animation .col1 {
+    margin-top: 2rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#animation .billede {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+}
+
+#animation .sectionwrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#animation .col2 {
+    margin-top: 3rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#animation .billede2 {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+}
+
+/*02 ANIMATION SLUT*/
+
+/*03 INDHOLD START*/
+#indhold {
+    display: flex;
+    background-image: url(billeder/baggrund_skov.png);
+    background-size: 100%;
+    width: 100vw;
+    height: 70vw;
+    position: relative;
+    z-index: 1;
+    background-repeat: repeat;
+    flex-direction: column;
+
+}
+
+#indhold .sectionwrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#indhold .col1 {
+    margin-top: 2rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#indhold .billede {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+}
+
+#indhold .sectionwrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#indhold .col2 {
+    margin-top: 3rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#indhold .billede2 {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+}
+
+/*03 INDHOLD SLUT*/
+/*04 UX START*/
+
+#ux {
+    display: flex;
+    background-image: url(billeder/baggrund_skov.png);
+    background-size: 100%;
+    width: 100vw;
+    height: 70vw;
+    position: relative;
+    z-index: 1;
+    background-repeat: repeat;
+    flex-direction: column;
+
+}
+
+#ux .sectionwrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+#ux .col1 {
+    margin-top: 2rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#ux .billede {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+}
+
+#ux .sectionwrapper2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ux .col2 {
+    margin-top: 3rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#ux .billede2 {
+    background-image: url(billeder/kathrinebrohus.jpg);
+    width: 20vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+}
+
+/*04 UX SLUT*/
+
+/*FOOTER START*/
+#info .sectionwrapper {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #3b332e;
+    position: relative;
+    flex-direction: row;
+}
+
+#info .col {
+    flex-grow: 2;
+    flex-basis: 200px;
+    margin: 1vw;
+    margin-top: 5vw;
+    margin-bottom: 8vw;
+    padding: 0.5vw;
+    font-size: 12px;
+}
+
+#info p,
+h4 {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .forsidepic {
+        background-image: url(billeder/baggrund_forside.png) max-width: none;
+        background-size: cover;
+        width: 100vw;
+        height: 120vw;
+        background-position: 1%;
+    }
+
+    #portfolio {
+        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-size: cover;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 130vw;
+        background-position: 50%;
+
+    }
+
+    #portfolio .sectionwrapper1 {
+        display: inline-block;
+        text-align: center;
+        margin-top: 0;
+
+    }
+
+    #portfolio .box1,
+    .box2,
+    .box3,
+    .box4 {
+        width: 50vw;
+        margin-left: 6.5rem;
+        margin-top: 2rem;
+
+    }
+
+
+    #cv {
+        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-size: cover;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 190vw;
+        background-position: 50%;
+
+    }
+
+    #cv .billede {
+
+        width: 60vw;
+        height: 54vw;
+    }
+
+
+    #web {
+        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-size: cover;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 190vw;
+        background-position: 50%;
+
+    }
+
+    #web .billede {
+
+        width: 60vw;
+        height: 54vw;
+    }
+
+    #animation {
+        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-size: cover;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 260vw;
+        background-position: 50%;
+
+    }
+
+    #animation .billede {
+
+        width: 60vw;
+        height: 54vw;
+    }
+
+    #animation .billede2 {
+
+        width: 60vw;
+        height: 54vw;
+    }
+
+    #indhold {
+        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-size: cover;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 260vw;
+        background-position: 50%;
+
+    }
+
+    #indhold .billede {
+
+        width: 60vw;
+        height: 54vw;
+    }
+
+    #indhold .billede2 {
+
+        width: 60vw;
+        height: 54vw;
+    }
+
+    #ux {
+        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-size: cover;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 260vw;
+        background-position: 50%;
+
+    }
+
+    #ux .billede {
+
+        width: 60vw;
+        height: 54vw;
+    }
+
+    #ux .billede2 {
+
+        width: 60vw;
+        height: 54vw;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    #menuknap {
+        display: none;
+    }
+
+    #menu.hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    #menu li {
+        display: inline-block;
+
+
+    }
+
+    /*BURGERMENU*/
+
+    .hidden {
+        display: none;
+        /*    transform: scale(0);*/
+        transform: translateX(-100%);
+
+    }
+
+    #menuknap {
+        display: inline-block;
+        color: white;
+        font-size: 2rem;
+    }
+
+    #menu {
+        list-style-type: none;
+        transition: transform .3s;
+        transform-origin: top left;
+        margin: -1rem;
+        margin-bottom: 0.12rem;
+
+
+    }
+
+    #nav {
+        display: none;
+    }
+
+    a {
+        text-decoration: none;
+        font-family: sans-serif;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: bold;
+        padding-right: 0.5rem;
+    }
+
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    #burgermenu {
+        display: none;
+    }
+
+
 }
