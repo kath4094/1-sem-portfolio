@@ -740,7 +740,8 @@ h4 {
     }
 
     #portfolio {
-        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
@@ -787,7 +788,8 @@ h4 {
 
 
     #web {
-        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
@@ -803,7 +805,8 @@ h4 {
     }
 
     #animation {
-        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
@@ -946,7 +949,5 @@ h4 {
         display: none;
     }
 
-
-}
 
 }
