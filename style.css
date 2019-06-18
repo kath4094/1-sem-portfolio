@@ -3,15 +3,38 @@ body {
 }
 
 p {
-    font-family: sans-serif;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+
+}
+
+
+a {
+    text-decoration: none;
+    color: #484E47;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    margin-right: 1rem;
+
 }
 
 li {
-    font-family: sans-serif;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 0.90rem;
+}
+
+h1 {
+    color: #484E47;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-size: 5.5rem;
+    text-align: center;
 }
 
 h3 {
-    font-family: sans-serif;
+    font-family: 'Saira Semi Condensed', sans-serif;
+    color: #484E47;
+    font-weight: bold;
+
 }
 
 nav {
@@ -19,8 +42,8 @@ nav {
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
-    height: 3rem;
-    width: 90rem;
+    height: 3.4vw;
+    width: 100vw;
     z-index: 5;
     background-color: white;
     position: fixed;
@@ -28,7 +51,7 @@ nav {
 
 nav a {
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Saira Semi Condensed', sans-serif;
     color: #484E47;
     font-size: 1.4rem;
     padding-left: 5rem;
@@ -38,9 +61,17 @@ nav a {
 }
 
 nav a:hover {
-    color: saddlebrown;
-    font-family: sans-serif;
+    color: #693815;
+    font-family: 'Saira Semi Condensed', sans-serif;
     text-decoration: none;
+}
+
+
+.hidden {
+    display: none;
+    /*    transform: scale(0);*/
+    transform: translateX(-100%);
+
 }
 
 
@@ -144,22 +175,13 @@ nav a:hover {
 #portfolio a {
     position: relative;
     top: 6.5vw;
-    font-family: sans-serif;
+    font-family: 'Saira Semi Condensed', sans-serif;
     color: #484E47;
     font-size: 1.3rem;
     text-decoration: none;
 
 }
 
-h1 {
-    color: #484E47;
-    font-family: sans-serif;
-    font-size: 5rem;
-    text-align: center;
-
-
-
-}
 
 /*Hover til hver boks*/
 #portfolio .overlay1 {
@@ -211,7 +233,7 @@ Husk at sæt det ind*/
     background-image: url(billeder/baggrund_skov.png);
     background-size: cover;
     width: 100vw;
-    height: 50vw;
+    height: 55vw;
     position: relative;
     z-index: 1;
     background-repeat: repeat-y;
@@ -224,21 +246,39 @@ Husk at sæt det ind*/
 #cv .sectionwrapper1 {
     display: flex;
     flex-wrap: wrap;
+
 }
 
 #cv .col1 {
-    margin-top: 2rem;
     flex-basis: 300px;
     flex-grow: 1;
     padding-left: 5rem;
-
+    margin-top: -2rem
 }
 
 #cv .billede {
-    background-image: url(billeder/kathrinebrohus.jpg);
-    width: 20vw;
-    height: 20vw;
+    background-image: url(billeder/kathrinebrohus.png);
+    width: 37vw;
+    height: 35vw;
     background-repeat: no-repeat;
+    background-size: 100%;
+    margin-bottom: 2rem;
+}
+
+
+#cv p {
+    background-color: rgba(255, 255, 255, 0.76);
+    color: #484E47;
+    padding: 1rem;
+
+}
+
+#cv ul {
+    background-color: rgba(255, 255, 255, 0.76);
+    color: #484E47;
+    padding: 1rem;
+    padding-left: 2rem;
+
 }
 
 /*CV SLUT*/
@@ -280,6 +320,14 @@ Husk at sæt det ind*/
     background-size: 100%
 }
 
+#web p {
+    background-color: rgba(255, 255, 255, 0.76);
+    color: #484E47;
+    padding: 1rem;
+
+}
+
+
 /*01 WEB SLUT*/
 /*02 ANIMATION START*/
 #animation {
@@ -287,7 +335,7 @@ Husk at sæt det ind*/
     background-image: url(billeder/baggrund_skov.png);
     background-size: 100%;
     width: 100vw;
-    height: 70vw;
+    height: 90vw;
     position: relative;
     z-index: 1;
     background-repeat: repeat;
@@ -307,13 +355,16 @@ Husk at sæt det ind*/
     flex-grow: 1;
     padding-left: 5rem;
 
+
 }
 
 #animation .billede {
-    background-image: url(billeder/kathrinebrohus.jpg);
-    width: 20vw;
-    height: 20vw;
+    background-image: url(billeder/eddie.png);
+    width: 37vw;
+    height: 22vw;
     background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 3rem;
 }
 
 #animation .sectionwrapper2 {
@@ -330,10 +381,19 @@ Husk at sæt det ind*/
 }
 
 #animation .billede2 {
-    background-image: url(billeder/kathrinebrohus.jpg);
-    width: 20vw;
+    background-image: url(billeder/gruppespil.png);
+    width: 37vw;
     height: 20vw;
     background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 3rem;
+}
+
+#animation p {
+    background-color: rgba(255, 255, 255, 0.76);
+    color: #484E47;
+    padding: 1rem;
+
 }
 
 /*02 ANIMATION SLUT*/
@@ -344,11 +404,12 @@ Husk at sæt det ind*/
     background-image: url(billeder/baggrund_skov.png);
     background-size: 100%;
     width: 100vw;
-    height: 70vw;
+    height: 55vw;
     position: relative;
     z-index: 1;
     background-repeat: repeat;
     flex-direction: column;
+
 
 }
 
@@ -367,31 +428,21 @@ Husk at sæt det ind*/
 }
 
 #indhold .billede {
-    background-image: url(billeder/kathrinebrohus.jpg);
-    width: 20vw;
+    background-image: url(billeder/solavine.png);
+    width: 35vw;
     height: 20vw;
     background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 5rem;
 }
 
-#indhold .sectionwrapper2 {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-#indhold .col2 {
-    margin-top: 3rem;
-    flex-basis: 300px;
-    flex-grow: 1;
-    padding-left: 5rem;
+#indhold p {
+    background-color: rgba(255, 255, 255, 0.76);
+    color: #484E47;
+    padding: 1rem;
 
 }
 
-#indhold .billede2 {
-    background-image: url(billeder/kathrinebrohus.jpg);
-    width: 20vw;
-    height: 20vw;
-    background-repeat: no-repeat;
-}
 
 /*03 INDHOLD SLUT*/
 /*04 UX START*/
@@ -401,7 +452,7 @@ Husk at sæt det ind*/
     background-image: url(billeder/baggrund_skov.png);
     background-size: 100%;
     width: 100vw;
-    height: 70vw;
+    height: 110vw;
     position: relative;
     z-index: 1;
     background-repeat: repeat;
@@ -424,10 +475,12 @@ Husk at sæt det ind*/
 }
 
 #ux .billede {
-    background-image: url(billeder/kathrinebrohus.jpg);
-    width: 20vw;
+    background-image: url(billeder/designsprint.png);
+    width: 35vw;
     height: 20vw;
     background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 3rem;
 }
 
 #ux .sectionwrapper2 {
@@ -444,10 +497,49 @@ Husk at sæt det ind*/
 }
 
 #ux .billede2 {
-    background-image: url(billeder/kathrinebrohus.jpg);
-    width: 20vw;
+    background-image: url(billeder/webprototype.png);
+    width: 35vw;
     height: 20vw;
     background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 3rem;
+}
+
+#ux .sectionwrapper3 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ux .col3 {
+    margin-top: 3rem;
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding-left: 5rem;
+
+}
+
+#ux .billede3 {
+    background-image: url(billeder/nativeapp.png);
+    width: 35vw;
+    height: 20vw;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 3rem;
+}
+
+#ux p {
+    background-color: rgba(255, 255, 255, 0.76);
+    color: #484E47;
+    padding: 1rem;
+
+}
+
+#ux ul {
+    background-color: rgba(255, 255, 255, 0.76);
+    color: #484E47;
+    padding: 1rem;
+    padding-left: 2rem;
+
 }
 
 /*04 UX SLUT*/
@@ -474,26 +566,173 @@ Husk at sæt det ind*/
 #info p,
 h4 {
     color: white;
-    font-family: sans-serif;
+    font-family: 'Saira Semi Condensed', sans-serif;
     text-align: center;
+
 }
 
+#info h4 {
+    font-size: 0.9rem;
+}
+
+#info p {
+    font-size: 0.8rem;
+}
+
+@media (max-width: 860px) {
+
+    #portfolio {
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 80vw;
+        background-position: 50%;
+
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    #cv {
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
+        background-size: cover;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 150vw;
+        background-position: 50%;
+
+    }
+
+    #cv .billede {
+
+        margin-top: 4rem;
+        width: 60vw;
+        height: 54vw;
+    }
+
+
+    #web {
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 130vw;
+        background-position: 50%;
+
+    }
+
+    #web .billede {
+        width: 60vw;
+        height: 54vw;
+    }
+
+    #animation {
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 265vw;
+        background-position: 50%;
+
+    }
+
+    #animation .billede {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    #animation .billede2 {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    #indhold {
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 160vw;
+        background-position: 50%;
+
+    }
+
+    #indhold .billede {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    #ux {
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
+        background-size: 100%;
+        background-repeat: repeat-y;
+        width: 100vw;
+        height: 370vw;
+        background-position: 50%;
+
+    }
+
+    #ux .billede {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    #ux .billede2 {
+        width: 75vw;
+        height: 40vw;
+    }
+
+    #ux .billede3 {
+        width: 75vw;
+        height: 40vw;
+    }
+
+}
+
+@media (max-width: 980px) {
+
+    .forsidepic {
+        background-image: url(billeder/baggrund_forside.png);
+        max-width: none;
+        background-size: cover;
+        width: 100vw;
+        height: 50vw;
+        background-position: 1%;
+    }
+
+
+
+}
+
+
 @media (max-width: 600px) {
+
     p {
         font-size: 1rem;
+        font-family: 'Saira Semi Condensed', sans-serif;
     }
 
     h1 {
         font-size: 2rem;
         margin-top: 3rem;
+        font-family: 'Saira Semi Condensed', sans-serif;
     }
 
     h4 {
         font-size: 1.2rem;
+        font-family: 'Saira Semi Condensed', sans-serif;
     }
 
     .forsidepic {
-        background-image: url(billeder/baggrund_forside.png) max-width: none;
+        background-image: url(billeder/baggrund_forside.png);
+        max-width: none;
         background-size: cover;
         width: 100vw;
         height: 120vw;
@@ -529,19 +768,21 @@ h4 {
 
 
     #cv {
-        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
-        height: 190vw;
+        height: 250vw;
         background-position: 50%;
+
 
     }
 
     #cv .billede {
-
+        margin-top: 3rem;
         width: 60vw;
-        height: 54vw;
+        height: 60vw;
     }
 
 
@@ -550,15 +791,15 @@ h4 {
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
-        height: 190vw;
+        height: 220vw;
         background-position: 50%;
 
     }
 
     #web .billede {
 
-        width: 60vw;
-        height: 54vw;
+        width: 75vw;
+        height: 40vw;
     }
 
     #animation {
@@ -566,65 +807,74 @@ h4 {
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
-        height: 260vw;
+        height: 550vw;
         background-position: 50%;
 
     }
 
     #animation .billede {
 
-        width: 60vw;
-        height: 54vw;
+        width: 75vw;
+        height: 40vw;
+        margin: -1rem
     }
 
     #animation .billede2 {
 
-        width: 60vw;
-        height: 54vw;
+        width: 75vw;
+        height: 40vw;
+        margin: -1rem;
     }
 
     #indhold {
-        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
-        height: 260vw;
+        height: 350vw;
         background-position: 50%;
 
     }
 
     #indhold .billede {
 
-        width: 60vw;
-        height: 54vw;
+        width: 75vw;
+        height: 40vw;
+        margin: -0.1rem
     }
 
-    #indhold .billede2 {
-
-        width: 60vw;
-        height: 54vw;
-    }
 
     #ux {
-        background-image: url(billeder/baggrund_skov.png) max-width: none;
+        background-image: url(billeder/baggrund_skov.png);
+        max-width: none;
         background-size: cover;
         background-repeat: repeat-y;
         width: 100vw;
-        height: 260vw;
+        height: 700vw;
         background-position: 50%;
 
     }
 
     #ux .billede {
 
-        width: 60vw;
-        height: 54vw;
+        width: 75vw;
+        height: 40vw;
+        margin: -0.1rem
     }
 
     #ux .billede2 {
 
-        width: 60vw;
-        height: 54vw;
+        width: 75vw;
+        height: 40vw;
+        margin: -0.1rem
+    }
+
+    #ux .billede3 {
+
+        width: 75vw;
+        height: 40vw;
+        margin: -0.1rem
     }
 }
 
@@ -632,11 +882,6 @@ h4 {
 
     #menuknap {
         display: none;
-    }
-
-    #menu.hidden {
-        transform: translateX(0);
-        opacity: 1;
     }
 
     #menu li {
@@ -647,12 +892,6 @@ h4 {
 
     /*BURGERMENU*/
 
-    .hidden {
-        display: none;
-        /*    transform: scale(0);*/
-        transform: translateX(-100%);
-
-    }
 
     #burgermenu {
         position: relative;
@@ -689,13 +928,14 @@ h4 {
 
     a {
         text-decoration: none;
-        font-family: sans-serif;
+        font-family: 'Saira Semi Condensed', sans-serif;
         color: #484E47;
         font-size: 1.3rem;
         font-weight: bold;
         padding-right: 0.5rem;
 
     }
+
 
 
 }
@@ -706,5 +946,7 @@ h4 {
         display: none;
     }
 
+
+}
 
 }
